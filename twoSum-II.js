@@ -1,13 +1,20 @@
 function twoSum(a, t) {
-    let ans = []
-    for (let i = 0; i < a.length; i++) {
-        for (let j = i + 1; j < a.length; j++) {
-            let sum = a[i] + a[j];
-            if (sum === t) {
-                return [i+1, j+1]
-            }
+    let arr=a.map((num,ind)=>({num,ind}));
+    arr.sort((a,b)=>a.num-b.num);
+
+    let l=0;
+    let r=arr.length-1;
+    while(l<r){
+        let sum=arr[l].num+arr[r].num;
+        if(sum===t){
+            return [arr[l].ind+1,arr[r].ind+1]
+        }else if(sum<t){
+            l++
+        }else{
+            r--
         }
-    } return ans;
+    }
+    return [];
 }
 
 let a = [2, 7, 11, 15]
