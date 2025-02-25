@@ -1,7 +1,12 @@
 function maxHeight(trees, M) {
     let l = 0;
-    let r = Math.max(...trees);
+    let r = -Infinity;
     let result = 0;
+
+    for (let i = 0; i < trees.length; i++) {
+        r = Math.max(r, trees[i])
+    }
+
 
     function getWood(h) {
         return trees.reduce((total, tree) => total + Math.max(0, tree - h), 0);
