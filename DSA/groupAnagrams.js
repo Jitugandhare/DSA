@@ -17,6 +17,5 @@ let strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 let ans = groupAnagrams(strs);
 console.log(ans)
 
-// [ [ 'aet', 'aet', 'aet' ], [ 'ant', 'ant' ], [ 'abt' ] ] . this code gives this as output
 
 // [["bat"],["nat","tan"],["ate","eat","tea"]] this should be output
