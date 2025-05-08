@@ -22,3 +22,7 @@ var combinationSum = function(candidates, target) {
 let candidates = [2, 3, 6, 7];
 let target = 7;
 console.log(combinationSum(candidates, target));
+
+
+let candidates1 = [2,3,5], target1 = 8;
+console.log(combinationSum(candidates1,target1))
