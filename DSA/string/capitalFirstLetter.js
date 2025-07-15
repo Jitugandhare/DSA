@@ -7,3 +7,4 @@ function capitalFirstLetter(str){
 
 let str="my name is jitu";
 console.log(capitalFirstLetter(str))
+
