@@ -9,17 +9,17 @@ const Home = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState([]);
 
+  const loadData = async () => {
+    const data = await fetchProducts();
+    setProducts(data);
+    setFilteredProducts(data);
+
+
+    const uniqueCategories = [...new Set(data.map((product) => product.category))];
+    setCategories(uniqueCategories);
+  };
+
   useEffect(() => {
-    const loadData = async () => {
-      const data = await fetchProducts();
-      setProducts(data);
-      setFilteredProducts(data);
-
-     
-      const uniqueCategories = [...new Set(data.map((product) => product.category))];
-      setCategories(uniqueCategories);
-    };
-
     loadData();
   }, []);
 
